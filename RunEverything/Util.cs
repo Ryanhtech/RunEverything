@@ -131,14 +131,31 @@ namespace RunEverything
                         FinalString += ListLine + "\n";
                     }
 
+
+                    // Write the dump
                     System.IO.File.WriteAllText(DumpLocation, FinalString);
 
+                    // Show a message to the user
                     System.Windows.Forms.MessageBox.Show(
                                                          "Dump finished.",
                                                          "RunEverything",
                                                          System.Windows.Forms.MessageBoxButtons.OK,
                                                          System.Windows.Forms.MessageBoxIcon.Information
                     );
+
+                    // Open the dump if the user asked for it.
+                    if (OpenDumpAfterOperation)
+                    {
+                        RunCommand(
+                                  "notepad",
+                                  DumpLocation,
+                                  false,
+                                  false,
+                                  RunProperties.WorkingDir,
+                                  false,
+                                  "",
+                                  false);
+                    }
                 }
             }
 
