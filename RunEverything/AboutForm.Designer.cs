@@ -29,14 +29,13 @@ namespace RunEverything
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             this.AppName = new System.Windows.Forms.Label();
             this.Copyright = new System.Windows.Forms.Label();
-            this.Legal = new System.Windows.Forms.TextBox();
             this.Slogan = new System.Windows.Forms.Label();
             this.VersionText = new System.Windows.Forms.Label();
             this.VersionName = new System.Windows.Forms.Label();
             this.OkButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // AppName
@@ -59,17 +58,6 @@ namespace RunEverything
             this.Copyright.TabIndex = 1;
             this.Copyright.Text = "Copyright 2021 Ryanhtech Labs";
             this.Copyright.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Legal
-            // 
-            this.Legal.Location = new System.Drawing.Point(11, 233);
-            this.Legal.Multiline = true;
-            this.Legal.Name = "Legal";
-            this.Legal.ReadOnly = true;
-            this.Legal.ShortcutsEnabled = false;
-            this.Legal.Size = new System.Drawing.Size(598, 79);
-            this.Legal.TabIndex = 2;
-            this.Legal.Text = resources.GetString("Legal.Text");
             // 
             // Slogan
             // 
@@ -111,16 +99,25 @@ namespace RunEverything
             this.OkButton.UseVisualStyleBackColor = true;
             this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 317);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(275, 15);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "This software is licensed under the Apache License.";
+            // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(622, 346);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.VersionText);
             this.Controls.Add(this.Slogan);
-            this.Controls.Add(this.Legal);
             this.Controls.Add(this.Copyright);
             this.Controls.Add(this.AppName);
             this.Controls.Add(this.VersionName);
@@ -142,10 +139,10 @@ namespace RunEverything
 
         private System.Windows.Forms.Label AppName;
         private System.Windows.Forms.Label Copyright;
-        private System.Windows.Forms.TextBox Legal;
         private System.Windows.Forms.Label Slogan;
         private System.Windows.Forms.Label VersionText;
         private System.Windows.Forms.Label VersionName;
         private System.Windows.Forms.Button OkButton;
+        private System.Windows.Forms.Label label1;
     }
 }
