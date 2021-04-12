@@ -1,2 +1,4 @@
 RunEverything/bin/*
 RunEverything/obj/*
+.vs/slnx.sqlite
+.vs/RunEverything/v16/.suo
