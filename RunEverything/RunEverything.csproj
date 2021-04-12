@@ -9,14 +9,23 @@
     <Company>Ryanhtech Labs</Company>
     <Description>Run anything, with arguments, elevated, or not.</Description>
     <Copyright>Copyright 2021 Ryanhtech Labs.</Copyright>
-    <PackageLicenseExpression>This software is protected by international copyright laws. Any copy of this program without permission from the copyright owner, or a part of it, may result in severe penalties, to the maximum extent under the law.</PackageLicenseExpression>
-    <AssemblyVersion>1.1.0.0</AssemblyVersion>
-    <FileVersion>1.1.0.0</FileVersion>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
     <Version>1.2.0</Version>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/Ryanhtech/RunEverything</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Ryanhtech/RunEverything</RepositoryUrl>
+    <RepositoryType>Git repository</RepositoryType>
+    <NeutralLanguage>en-GB</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
     <None Include="..\.editorconfig" Link=".editorconfig" />
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
