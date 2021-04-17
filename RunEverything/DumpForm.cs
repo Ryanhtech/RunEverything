@@ -182,6 +182,29 @@ namespace RunEverything
                 return false;
             }
 
+            try
+            {
+                if (!System.IO.File.Exists(SaveLocation.Text))
+                {
+                    // Try to write to the file to check if we can without errors.
+                    System.IO.File.WriteAllText(SaveLocation.Text, "");
+                    System.IO.File.Delete(SaveLocation.Text);
+                }
+            }
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show(
+                    "An error occurred. The write operation to the selected dump location encourted a problem. " +
+                    "The access to the file might be denied, or the entered path isn't valid. You can try the following:\n\n" +
+                    "- Run RunEverything as administrator.\n" +
+                    "- Check the spelling of the save location.",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+
+                return false;
+            }
+
 
             /* // Check the user entries (i.e. if directories exists)
             
