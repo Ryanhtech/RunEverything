@@ -38,6 +38,9 @@ namespace RunEverything
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            // Show the administrator warning
+            Util.AlertUserAdministrator();
+
             bool FileMissing        =    false;  // If an error must be shown after restarting
             bool DirMissing         =    false;
 

@@ -183,5 +183,25 @@ namespace RunEverything
             // Return nothing: the operation completed successfully
             return "";
         }
+
+        public static void AlertUserAdministrator()
+        {
+            // This function alerts the user if he ran RunEverything as administrator,
+            // to avoid exposing to the GHSA-vxf2-x72m-x9m2 vulnerability.
+
+            if (HasPrivileges())
+            {
+                // If RunEverything has been run as administrator, show the warning.
+                System.Windows.Forms.MessageBox.Show(
+                    "You ran RunEverything as administrator.\n" +
+                    "All programs that you will run using RunEverything will be run as administrator too. Please be " +
+                    "extremely careful at what you will be running. Run ONLY software you trust.\n\n" +
+                    "If you don't want this to happen, please do not run RunEverything as administrator.\nClick OK to continue.",
+                    "Warning - RunEverything",
+                    System.Windows.Forms.MessageBoxButtons.OK,
+                    System.Windows.Forms.MessageBoxIcon.Warning
+                );
+            }
+        }
     }
 }
